@@ -37,15 +37,23 @@ class HhSpider(scrapy.Spider):
             link = vacancy.css("a[data-qa*=serp-item__title]::attr(href)").get()
             print(link)
 
+            vacancy_span_list = vacancy.css("span").getall()
+            if len(vacancy_span_list) < 30:
+                number_experience = 4
+                number_payment = 3
+            else:
+                number_experience = 5
+                number_payment = 4
+
             # experience
-            vacancy_experience = vacancy.css("span").getall()[4]
+            vacancy_experience = vacancy.css("span").getall()[number_experience]
             vacancy_experience = ' '.join(re.findall(r'\>(.*?)\<', vacancy_experience))
             if not vacancy_experience:
                 vacancy_experience = ''
             print(vacancy_experience)
 
             # vacancy_payment
-            vacancy_payment = vacancy.css("span").getall()[3]
+            vacancy_payment = vacancy.css("span").getall()[number_payment]
             if vacancy_payment:
                 vacancy_payment = vacancy_payment.replace('\u202f', '')
                 vacancy_payment = ' '.join(re.findall(r'\>(.*?)\<', vacancy_payment))
