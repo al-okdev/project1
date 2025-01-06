@@ -1,0 +1,8 @@
+{% block content %}
+    <h2>Vacancy</h2>
+    <ul>
+        {% for vacancy in object_list %}
+            <li><b>{{ vacancy.experiece }}</b> {{ vacancy.price }} {{ vacancy.competentions }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

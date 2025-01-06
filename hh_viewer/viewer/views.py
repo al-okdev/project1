@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from viewer.models import Vacancy
 
-# Create your views here.
+class VacancyListView(ListView):
+    model = Vacancy
