@@ -1,0 +1,34 @@
+## hh_viewer_fastapi
+
+
+### Creating a virtual environment:
+
+    python -m venv .venv
+
+### Windows: 
+
+    powershell:
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+    acivate venv:
+    .venv\Scripts\activate
+
+### Install packages:
+    pip install -r requirements.txt
+
+### Creating .env file:
+
+    DB_HOST = 'localhost'
+    DB_PORT = '5432'
+    DB_NAME = 'db_name'
+    DB_USER = 'user_name'
+    DB_PASSWORD = 'password'
+
+### Preparing migrations:
+    aerich init-db
+    aerich migrate --name name_migrate
+    aerich upgrade/downgrade
+
+### Run code:
+
+    fastapi dev
