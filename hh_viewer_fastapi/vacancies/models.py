@@ -19,7 +19,7 @@ class Vacancy(Model):
     
 @register(Vacancy)
 class VacancyAdmin(TortoiseModelAdmin):
-    list_display = ("uuid", "experiece", "price", "competentions")
+    list_display = ("id", "experiece", "price", "competentions")
 
 class User(Model):
     username = fields.CharField(max_length=255, unique=True)
