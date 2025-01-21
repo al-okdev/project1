@@ -24,6 +24,10 @@
     DB_USER = 'user_name'
     DB_PASSWORD = 'password'
 
+    ADMIN_USER_MODEL=User
+    ADMIN_USER_MODEL_USERNAME_FIELD=username
+    ADMIN_SECRET_KEY=secret_key
+
 ### Preparing migrations:
     aerich init-db
     aerich migrate --name name_migrate
