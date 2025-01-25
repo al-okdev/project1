@@ -29,3 +29,6 @@
 ### Run code:
 
     fastapi dev
+
+### Run custom code
+    PYTHONPATH=.. python load_db.py ../../hh_scrapy/hh/scan_result.txt
