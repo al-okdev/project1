@@ -23,6 +23,9 @@
     aerich migrate --name name_migrate
     aerich upgrade/downgrade
 
+### Docker start postgres
+    docker-compose up
+
 ### Run code:
 
     fastapi dev
