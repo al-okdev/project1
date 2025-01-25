@@ -16,17 +16,7 @@
 ### Install packages:
     pip install -r requirements.txt
 
-### Creating .env file:
-
-    DB_HOST = 'localhost'
-    DB_PORT = '5432'
-    DB_NAME = 'db_name'
-    DB_USER = 'user_name'
-    DB_PASSWORD = 'password'
-
-    ADMIN_USER_MODEL=User
-    ADMIN_USER_MODEL_USERNAME_FIELD=username
-    ADMIN_SECRET_KEY=secret_key
+### Rename .env.template to .env
 
 ### Preparing migrations:
     aerich init-db
