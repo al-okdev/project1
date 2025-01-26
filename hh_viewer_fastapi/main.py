@@ -17,16 +17,6 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 app.mount("/admin", admin_app)
-
-'''@app.get('/create_su')
-async def su():
-    user = await User.create(
-        username="admin3",
-        hash_password="$2a$12$KU9Y9OfpJTRf/F3nx7w0juMB6499./pF1STiSZKxenopWslZe/CdS", # hash пароля через bcrypt
-        is_superuser=True,
-        is_active=True
-    )
-    return {user}'''
     
 @app.get("/")
 async def read_root():

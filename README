@@ -26,8 +26,10 @@
 ### Docker start postgres
     docker-compose up
 
-### Run code:
+### add admin user
+    PYTHONPATH=.. python add_user_admin.py username password
 
+### Run code:
     fastapi dev
 
 ### Run custom code
