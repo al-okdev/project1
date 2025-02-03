@@ -2,7 +2,6 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import time
-import json
 
 def key_requirements(link: str) -> list[str]:
     respons = requests.get(link, 
@@ -30,7 +29,6 @@ def scan_page(link: str)->list['str']:
 
     
     for vacancy in vacancy_list:
-        vacancy_result = []
 
         # link
         link = vacancy.find('a', attrs={"data-qa": re.compile('serp-item__title')})['href']
