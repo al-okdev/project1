@@ -34,3 +34,10 @@
 
 ### Run custom code
     PYTHONPATH=.. python load_db.py ../../hh_scrapy/hh/scan_result.txt
+
+### Project add ruff linter and formater
+    pip install ruff
+    add file pyproject.toml:
+
+    ruff check - check project linter
+    ruff format - format project
