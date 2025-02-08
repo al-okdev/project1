@@ -1,10 +1,8 @@
 from typing import Union
 from contextlib import asynccontextmanager
 import db
-from vacancies.models import Vacancy
-from vacancies.admin import VacancyAdmin
-from users.models import User
-from users.admin import UserAdmin
+from vacancies.admin import VacancyAdmin, Vacancy  # noqa: F401
+from users.admin import UserAdmin  # noqa: F401
 
 from fastadmin import fastapi_app as admin_app
 
